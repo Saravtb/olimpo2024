@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+    html, body {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Bakbak One", regular, sans-serif;
+      background-color: #EDD96E;
+      background-image: url('imagens/textura.jpg');
+      background-size: cover;
+      background-blend-mode: multiply;
+      padding: 0 144px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .nav-container a {
+      color: rgba(0, 0, 0, 0.6);
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: background-color 0.001s;
+    }
+
+    .nav-container a:hover {
+      background-color: #c3c1c1;
+      border-radius: 90px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+    }
+
+    .header-content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 65px;
+      font-family: "Baloo Bhai 2", sans-serif;
+      font-style: normal;
+      color:rgba(0, 0, 0, 0.8);
+    }
+
+    h2 {
+      font-family: "Baloo Bhai 2", sans-serif;
+      position: relative;
+      left: 54%;
+      bottom: 507px;
+      font-size: 58px;
+      color: rgba(0, 0, 0, 0.8);
+      text-align: justify;
+    }
+
+    h3 {
+      font-family: "Baloo Bhai 2", sans-serif;
+      position: relative;
+      left: 58%;
+      bottom: 570px;
+      font-size: 28px;
+      color: rgba(0, 0, 0, 0.6);
+      text-align: justify;
+    }
+
+    h4 {
+      font-family: "Baloo Bhai 2", sans-serif;
+      position: relative;
+      left: 85%;
+      bottom: 530px;
+      font-size: 28px;
+      color: rgba(0, 0, 0, 0.6);
+      text-align: left;
+    }
+
+    .frame-image {
+      position: relative;
+      bottom: 20%;
+      width: 290px;
+      height: auto;
+      border-radius: 15px;
+      border: #000000 solid 1px;
+      box-shadow: 92px 75px 0px #54C172;
+    }
+
+    button {
+      font-family: "Baloo Bhai 2", sans-serif;
+      position: relative;
+      padding: 40px;
+      left: 60%;
+      bottom: 570px;
+      border-radius: 7px;
+      border-color: #ffffff;
+      font-size: 20px;
+      color: #000000;
+      width: 280px;
+      height: 280px;
+    }
+
+    a {
+        font-family: "Bakbak One";
+        color: #000000b3;
+    }
+
+  </style>
+  <script>
+   
+    function showInfo(info) {
+      document.getElementById('info').innerHTML = info;
+    }
+  </script>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-container">
+      <a href="file:///C:/xampp/htdocs/olimpo2024/a.html#">Início</a>
+      <a href="file:///C:/xampp/htdocs/olimpo2024/b.html#">Jogos</a>
+      <a href="file:///C:/xampp/htdocs/olimpo2024/c.html#">Medalhas</a>
+      <a href="file:///C:/xampp/htdocs/olimpo2024/d.html#">Entrevistas</a>
+      <a href="file:///C:/xampp/htdocs/olimpo2024/e.html#">Dê seu palpite</a>
+    </div>
+  </div>
+
+  <section>
+    <h1>Olimpo2024</h1>
+  </section>
+
+  <p>
+    <img src="imagens/imagem.jpg" alt="Símbolo das Olimpíadas" class="frame-image" />
+  </p>
+  
+  <section>
+    <h2>Fique informado<br>nessa olimpíadas</h2>
+    <h3> De forma rápida e eficaza 
+<br>a informação chega até você!
+</h3>
+  </section>
+
+ 
+  <button><a href="file:///C:/xampp/htdocs/olimpo2024/e.html#">Dê seu palpite!</a></button>
+
+  <section>
+    <h4><a href="file:///C:/xampp/htdocs/olimpo2024/b.html#">Assista Já ></a></h4>
+  </section>
+
+</body>
+</html>

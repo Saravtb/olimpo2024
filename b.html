@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Inicial</title>
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai:wght@400;700&display=swap" rel="stylesheet">
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bakbak One', sans-serif; 
+  background-color: #6391c5;
+  padding: 0 144px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+  min-height: 100vh; 
+  margin: 0; 
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(https://w0.peakpx.com/wallpaper/836/169/HD-wallpaper-dark-blue-waves-plaster-texture-dark-blue-waves-background-plaster-texture-waves-texture-dark-blue-waves-texture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; 
+  z-index: -1; 
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF; 
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: calc(100%);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-container a {
+  color: rgba(0, 0, 0, 0.6); 
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s, border-radius 0.3s;
+  border-radius: 25px;
+}
+
+.nav-container a:hover {
+  background-color: #d4d1d1;
+}
+
+.content {
+  flex: 1;
+  padding: 20px 0;
+  text-align: center; 
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  font-family: 'Baloo Bhai', cursive; 
+  font-size: 46px; 
+  font-weight: bold;
+  margin-bottom: 40px; 
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px; 
+}
+
+.video {
+  width: 100%;
+  max-width: 320px;
+  border: 2px solid #ffffff; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff; 
+}
+
+.video iframe {
+  width: 100%;
+  border-radius: 15px; 
+  border: none; /
+}
+
+.video-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.video-caption {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333; 
+  text-align: center;
+}
+
+.footer {
+  background-color: #FFFFFF; 
+  color: rgba(0, 0, 0, 0.6); 
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-container">
+    <a href="file:///C:/xampp/htdocs/olimpo2024/a.html#">Inicio</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/b.html#">Jogos</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/c.html#">Medalhas</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/d.html#">Entrevistas</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/e.html#">De seu palpite</a>
+  </div>
+</div>
+
+<div class="content">
+  <div class="title">Jogos</div> 
+  <div class="video-container">
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/qCGEWWxh3go?si=FTnvOba5UeNluPV2" allowfullscreen></iframe>
+      <div class="video-title">Judô Feminino</div>
+      <div class="video-caption">02 de agosto de 2024.</div>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/yAutIREa-3o?si=_xyLhDH1MRWcGgEq" allowfullscreen></iframe>
+      <div class="video-title">Vôlei masculino</div>
+      <div class="video-caption">27 de julho de 2024.</div>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/baBSrSbE1ls?si=JGG_Fjo3j8vq6Nfs" allowfullscreen></iframe>
+      <div class="video-title">Tênis de mesa</div>
+      <div class="video-caption">05 de agosto de 2024.</div>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/YtkCv-9-c6Y?si=XB8EXjF_AYuZqfT8" allowfullscreen></iframe>
+      <div class="video-title">Ginastica artistica</div>
+      <div class="video-caption">05 de agosto de 2024.</div>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/iN_Lok8b4RE?si=yLKT67DQCSsLJ-mG" allowfullscreen></iframe>
+      <div class="video-title">Natação feminina</div>
+      <div class="video-caption">31 de agosto de 2024.</div>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/TV4i55solDA?si=1rCCjwNS41ujs6t3" allowfullscreen></iframe>
+      <div class="video-title">Futebol feminino</div>
+      <div class="video-caption">03 de agosto de 2024.</div>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/R1P_WST5oKE?si=4KRfd11fW09a2KNo" allowfullscreen></iframe>
+      <div class="video-title">Arco e flexa</div>
+      <div class="video-caption">30 de julho de 2024.</div>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/pXAosLU-DM8?si=7MnSHMkMs4GPLgeQ" allowfullscreen></iframe>
+      <div class="video-title">Esgrima</div>
+      <div class="video-caption">29 de julho de 2024.</div>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/nZo72q-dztc?si=sJbpNvSwKro5_qtN" allowfullscreen></iframe>
+      <div class="video-title">Todas as medalhas do Brasil- Olimpíadas 2024</div>
+      <div class="video-caption">11 de agosto de 2024.</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2024 Mostra tua força Brasil.</p>
+</div>
+
+</body>
+</html>

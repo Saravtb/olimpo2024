@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Inicial</title>
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai:wght@400;700&display=swap" rel="stylesheet">
+<style>
+html, body {
+  height: 100%; 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+      font-family: "Bakbak One", regular, sans-serif;
+      background-color: #EDD96E;
+      background-image: url('imagens/textura.jpg');
+      background-size: cover;
+      background-blend-mode: multiply;
+      padding: 0 144px;
+      display: flex;
+      flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; 
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around; 
+  width: 100%;
+  max-width: 100%; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+.nav-container a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s, border-radius 0.3s;
+  border-radius: 25px; 
+}
+
+.nav-container a:hover {
+  background-color: #d4d1d1; 
+}
+
+.title {
+  font-family: 'Baloo Bhai', cursive; 
+  font-size: 46px; 
+  font-weight: bold;
+  margin: 20px 0; 
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.title h1 {
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px; 
+}
+
+.title h2 {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between; 
+  margin: 20px 0; 
+}
+
+.box {
+  width: 30%;
+  padding: 20px; 
+  background-color: #f4f4f4;
+  border: 2px solid #ffffff; 
+  text-align: center;
+  position: relative;
+  transition: background-color 0.3s;
+  border-radius: 50px; 
+  overflow: hidden;
+  margin: 0 10px; 
+}
+
+.box img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 50px 50px 50px 50px; 
+}
+
+.box:hover {
+  background-color: #bfbebb;
+}
+
+.box h3 {
+  margin-bottom: 10px; 
+  color: rgba(0, 0, 0, 0.8); 
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s;
+}
+
+#info-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; 
+  height: 60%; 
+  background-color: #fff;
+  border: 2px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  display: none;
+  border-radius: 50px; 
+  overflow-y: auto; 
+}
+
+#info-box ul {
+  text-align: left; 
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  display: none;
+}
+
+.footer {
+  background-color: #ffffff; 
+  color: rgba(0, 0, 0, 0.6); 
+  text-align: center;
+  padding: 20px 0; 
+  width: 100%;
+  box-sizing: border-box; 
+  position: relative;
+  bottom: 0;
+}
+</style>
+<script>
+function showInfo(info) {
+  document.getElementById('info-box').innerHTML = info;
+  document.getElementById('info-box').style.display = 'block';
+  document.getElementById('info-box').style.display = 'block';
+  document.getElementById('overlay').style.display = 'block';
+}
+
+function closeInfoBox() {
+  document.getElementById('info-box').style.display = 'none';
+  document.getElementById('overlay').style.display = 'none';
+}
+
+window.onclick = function(event) {
+  const overlay = document.getElementById('overlay');
+  const infoBox = document.getElementById('info-box');
+  
+  if (event.target === overlay) {
+    closeInfoBox();
+  }
+};
+</script>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-container">
+    <a href="file:///C:/xampp/htdocs/olimpo2024/a.html#">Inicio</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/b.html#">Jogos</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/c.html#">Medalhas</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/d.html#">Entrevistas</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/e.html#">De seu palpite</a>
+  </div>
+</div>
+
+<div class="title">
+  <h1>Medalhas Olímpicas</h1>
+  <h2>Como nossa seleção foi nas olimpiadas</h2>
+</div>
+
+<div class="content">
+  <div class="box" onclick="showInfo(`
+    <h3>Medalha de Ouro</h3>
+    <ul>
+      <li>Ana Patrícia e Duda – Ouro no vôlei de praia feminino, terminando o torneio invictas.</li>
+      <li>Rebeca Andrade – Ouro no solo da ginástica artística, superando Simone Biles e se tornando a maior medalhista da história do Brasil.</li>
+      <li>Beatriz Souza – Ouro no judô (+78kg), derrotando adversárias fortes, inclusive a favorita francesa.</li>
+    </ul>`)">
+    <img src='https://www.infomoney.com.br/wp-content/uploads/2024/08/2024-08-02T163221Z_1204730734_UP1EK8219XV2D_RTRMADP_3_OLYMPICS-2024-JUDO.jpg?fit=1280%2C910&quality=50&strip=all' alt='Medalha de Ouro'>
+    <h3>Medalha de Ouro</h3>
+    <div class="arrow">↓</div>
+  </div>
+  
+  <div class="box" onclick="showInfo(`
+    <h3>Medalha de Prata</h3>
+    <ul>
+      <li>Willian Lima – Prata no judô (66kg), feito que não era conquistado desde 2000.</li>
+      <li>Rebeca Andrade – Prata no individual geral e salto na ginástica artística.</li>
+      <li>Isaquias Queiroz – Prata na canoagem (C1 1000m).</li>
+      <li>Futebol feminino – Prata após perder a final para os EUA.</li>
+      <li>Caio Bonfim – Prata na marcha atlética (20km).</li>
+      <li>Tati Weston-Webb – Prata no surfe.</li>
+    </ul>`)">
+    <img src='https://images02.brasildefato.com.br/0ed963cf1bd4eb2e9c269d9ac4edd076.webp' alt='Medalha de Prata'>
+    <h3>Medalha de Prata</h3>
+    <div class="arrow">↓</div>
+  </div>
+  
+  <div class="box" onclick="showInfo(`
+    <h3>Medalha de Bronze</h3>
+    <ul>
+      <li>Larissa Lima – Bronze no judô (52kg).</li>
+      <li>Equipe mista de judô – Bronze na competição por equipes.</li>
+      <li>Rebeca Andrade e equipe – Bronze na ginástica artística por equipes.</li>
+      <li>Alison dos Santos – Bronze nos 400m com barreiras.</li>
+      <li>Gabriel Medina – Bronze no surfe.</li>
+      <li>Rayssa Leal – Bronze no skate street, sua segunda medalha olímpica.</li>
+      <li>Augusto Akio – Bronze no skate park.</li>
+      <li>Seleção feminina de vôlei – Bronze após vitória sobre a Turquia.</li>
+    </ul>`)">
+    <img src='https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/07/brasil-bronze-volei-paris-2024.jpg' alt='Medalha de Bronze'>
+    <h3>Medalha de Bronze</h3>
+    <div class="arrow">↓</div>
+  </div>
+</div>
+
+<div id="info-box"></div>
+
+<div id="overlay"></div>
+
+<div style="flex: 1;"></div>
+
+<div class="footer">
+  <p>© 2024 Mostra tua força Brasil.</p>
+</div>
+
+</body>
+</html>

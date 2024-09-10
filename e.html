@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palpites Olímpicos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Babak One', cursive;
+            background-color: #EDD96E;
+            color:rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 0 144px;
+            position: relative;
+            z-index: 0;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(https://img.freepik.com/free-vector/wave-textures-white-background-vector_53876-64054.jpg?w=1060&t=st=1725974176~exp=1725974776~hmac=f49642889fbfec956ef805494f46d2ea9395f221f82c9e2adb86dda58f5a404c);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: calc(100%);
+        }
+
+        .nav-container a {
+            font-family: 'Baloo Bhai', cursive;
+            color: rgba(0, 0, 0, 0.6);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s, border-radius 0.3s;
+            border-radius: 25px;
+            
+        }
+
+        .nav-container a:hover {
+            background-color: #beb8b8;
+        }
+
+        main {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-grow: 1;
+            padding: 30px;
+        }
+
+        .feedback {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 80px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            margin-left: 90px;
+        }
+
+        .feedback h1 {
+            font-family: 'Bakbak One';
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .feedback p {
+            margin: 10px 0;
+            font-family: 'Bakbak One';
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #f57f17;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #ffb300;
+        }
+
+        .center-image {
+            display: block;
+            margin: 80px auto;
+            max-width: 600px;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 20px 0px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        textarea {
+            width: 380px;
+            height: 60px;
+        }
+        p{
+            font-family: 'Baloo Bhai', cursive;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-container">
+          <a href="file:///C:/xampp/htdocs/olimpo2024/a.html#">Início</a>
+          <a href="file:///C:/xampp/htdocs/olimpo2024/b.html#">Jogos</a>
+          <a href="file:///C:/xampp/htdocs/olimpo2024/c.html#">Medalhas</a>
+          <a href="file:///C:/xampp/htdocs/olimpo2024/d.html#">Entrevistas</a>
+          <a href="file:///C:/xampp/htdocs/olimpo2024/e.html#">Dê seu palpite</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="feedback">
+            <h1>Dê seu palpite</h1>
+            <p>Queremos ouvir sua opinião sobre a partida!</p>
+            
+            <form action="https://formspree.io/f/xovarqpq" method="POST">
+                <p>
+                    <label for="nome"></label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </p>
+                <form id="feedback-form">
+                    <label for="modalidade"></label>
+                    <select id="modalidade" name="modalidade" required>
+                        <option value="" disabled selected>Selecione a modalidade</option>
+                        <option value="Futebol">Futebol</option>
+                        <option value="Basquete">Basquete</option>
+                        <option value="Vôlei">Volei</option>
+                        <option value="Judô">Judô</option>
+                        <option value="Handebol">Handebol</option>
+                        <option value="Boxe">Boxe</option>
+                        <option value="Rugby">Rugby</option>
+                        <option value="Tênis">Tênis</option>
+                        <option value="Ginastica">Ginastica</option>
+                        <option value="Volei de Praia">Volei de Praia</option>
+                    </select>
+                    <form id="feedback-form">
+                        <label for="Tipo"></label>
+                        <select id="Tipo" name="Tipo" required>
+                            <option value="" disabled selected>Selecione a categoria</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                        </select>
+                <p>
+                    <label for="placar"></label>
+                    <input type="text" id="placar" name="placar" placeholder="Escreva o placar do jogo" required>
+                </p>  
+                    <button type="submit">Enviar</button>
+                
+            </form>
+        </section>
+        <img src="imagens/bichoestranho.png" alt="Imagem centralizada" class="center-image">
+    </main>
+
+    <footer>
+        <p>E-mail: Olimpo2024.Brasil@gmail.com</p>
+        <p>Telefone: +55 11 94467-9823</p>
+    </footer>
+
+</body>
+</html>
