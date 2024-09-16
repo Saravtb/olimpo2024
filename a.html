@@ -1,183 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Inicial</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Baloo+Bhai+2:wght@400..800&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai:wght@400;700&display=swap" rel="stylesheet">
+<title>Página Inicial</title>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    html, body {
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
+<style>
+html, body {
+  height: 100%; 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: "Bakbak One", regular, sans-serif;
-      background-color: #EDD96E;
-      background-image: url('imagens/textura.jpg');
-      background-size: cover;
-      background-blend-mode: multiply;
-      padding: 0 144px;
-      display: flex;
-      flex-direction: column;
-    }
+body {
+  font-family: "Bakbak One", cursive;
+  font-style: normal;
+  background-color: #EDD96E;
+  background-image: url('imagens/textura.jpeg'); /* Adiciona a textura */
+  background-size: cover; /* Ajusta a textura para cobrir o fundo */
+  background-blend-mode: multiply; /* Mistura a cor de fundo com a textura */
+  padding: 0 144px; 
+  display: flex;
+  flex-direction: column;
+  background-image: url('imagens/textura.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
+}
 
-    .navbar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #ffffff;
-      padding: 20px 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF; 
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    .nav-container {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      max-width: 100%;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: calc(100%);
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .nav-container a {
-      color: rgba(0, 0, 0, 0.6);
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      transition: background-color 0.001s;
-    }
+.nav-container a {
+  color: rgba(0, 0, 0, 0.6); 
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s, border-radius 0.3s;
+  border-radius: 25px;
+}
 
-    .nav-container a:hover {
-      background-color: #c3c1c1;
-      border-radius: 90px;
-    }
+.nav-container a:hover {
+  background-color: #d4d1d1;
+}
+h1 {
+  font-size: 80px;
+  font-family: "Baloo Bhai", cursive;
+  color: rgba(0, 0, 0, 0.8);
+}
+h2 {
+  margin-bottom: 5%;
+}
+a{
+  color: rgba(0, 0, 0, 0.6);
+}
 
-    .content {
-      display: flex;
-      justify-content: space-around;
-      margin: 40px 0;
-    }
+.container {
+  position: relative;
+  left: 15%;
+  top: 5%;
+}
 
-    .header-content {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.frame-image {
+  position: relative;
+  bottom: 65%;
+  width: 300px;
+  height: auto;
+  border-radius: 50px;
+  border: #ffffff solid 1px;
+  box-shadow: 92px 75px 0px #54C172;
+}
 
-    h1 {
-      font-size: 65px;
-      font-family: "Baloo Bhai 2", sans-serif;
-      font-style: normal;
-      color:rgba(0, 0, 0, 0.8);
-    }
+button {
+  font-family: "Bakbak", sans-serif;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 15px;
+  border-color: rgb(255, 244, 244);
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  width: 240px;
+  height: 70px;
+}
 
-    h2 {
-      font-family: "Baloo Bhai 2", sans-serif;
-      position: relative;
-      left: 54%;
-      bottom: 507px;
-      font-size: 58px;
-      color: rgba(0, 0, 0, 0.8);
-      text-align: justify;
-    }
-
-    h3 {
-      font-family: "Baloo Bhai 2", sans-serif;
-      position: relative;
-      left: 58%;
-      bottom: 570px;
-      font-size: 28px;
-      color: rgba(0, 0, 0, 0.6);
-      text-align: justify;
-    }
-
-    h4 {
-      font-family: "Baloo Bhai 2", sans-serif;
-      position: relative;
-      left: 85%;
-      bottom: 530px;
-      font-size: 28px;
-      color: rgba(0, 0, 0, 0.6);
-      text-align: left;
-    }
-
-    .frame-image {
-      position: relative;
-      bottom: 20%;
-      width: 290px;
-      height: auto;
-      border-radius: 15px;
-      border: #000000 solid 1px;
-      box-shadow: 92px 75px 0px #54C172;
-    }
-
-    button {
-      font-family: "Baloo Bhai 2", sans-serif;
-      position: relative;
-      padding: 40px;
-      left: 60%;
-      bottom: 570px;
-      border-radius: 7px;
-      border-color: #ffffff;
-      font-size: 20px;
-      color: #000000;
-      width: 280px;
-      height: 280px;
-    }
-
-    a {
-        font-family: "Bakbak One";
-        color: #000000b3;
-    }
-
-  </style>
-  <script>
-   
-    function showInfo(info) {
-      document.getElementById('info').innerHTML = info;
-    }
-  </script>
+.footer {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.6); /* Cor do texto igual ao da navbar */
+  text-align: center;
+  padding: 40px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+</style>
+<script>
+function showInfo(info) {
+  document.getElementById('info').innerHTML = info;
+}
+</script>
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="nav-container">
-      <a href="file:///C:/xampp/htdocs/olimpo2024/a.html#">Início</a>
-      <a href="file:///C:/xampp/htdocs/olimpo2024/b.html#">Jogos</a>
-      <a href="file:///C:/xampp/htdocs/olimpo2024/c.html#">Medalhas</a>
-      <a href="file:///C:/xampp/htdocs/olimpo2024/d.html#">Entrevistas</a>
-      <a href="file:///C:/xampp/htdocs/olimpo2024/e.html#">Dê seu palpite</a>
-    </div>
+<!-- Barra de Navegação -->
+<div class="navbar">
+  <div class="nav-container">
+    <a href="file:///C:/xampp/htdocs/olimpo2024/a.html#">Início</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/b.html">Jogos</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/c.html">Medalhas</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/d.html">Entrevistas</a>
+    <a href="file:///C:/xampp/htdocs/olimpo2024/e.html">Dê seu palpite</a>
   </div>
+</div>
 
-  <section>
-    <h1>Olimpo2024</h1>
-  </section>
+<h1>Olimpo2024</h1>
 
-  <p>
-    <img src="imagens/imagem.jpg" alt="Símbolo das Olimpíadas" class="frame-image" />
-  </p>
-  
-  <section>
-    <h2>Fique informado<br>nessa olimpíadas</h2>
-    <h3> De forma rápida e eficaza 
-<br>a informação chega até você!
-</h3>
-  </section>
+<div class="container text-center">
+  <div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col">
+      <h2>Fique informado<br>nessa Olimpíadas!!</h2>
+      <h3>De forma rápida e eficaz a informação chega até você!</h3>
+      <br>
+      <button><a href="file:///C:/xampp/htdocs/olimpo2024/e.html">Faça seu palpite!</a></button>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
 
- 
-  <button><a href="file:///C:/xampp/htdocs/olimpo2024/e.html#">Dê seu palpite!</a></button>
+<p>
+  <img src="imagens/imagem.jpg" alt="Símbolo das Olimpíadas" class="frame-image"/>
+</p>
 
-  <section>
-    <h4><a href="file:///C:/xampp/htdocs/olimpo2024/b.html#">Assista Já ></a></h4>
-  </section>
+<div style="flex: 1;"></div>
+
+<div class="footer">
+  <p><a href="file:///C:/xampp/htdocs/olimpo2024/b.html">a programação ao vivo</a></p>
+</div>
 
 </body>
 </html>
